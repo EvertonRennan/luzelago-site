@@ -1,0 +1,14 @@
+index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luz & Lago Engenharia</title>
+  </head>
+  <body style="background-color:#003366;color:white;font-family:Arial;text-align:center;padding:50px;">
+    <h1>Bem-vindo à Luz & Lago Engenharia</h1>
+    <p>Energia solar compartilhada, sem instalação, com economia, digital e sustentável.</p>
+  </body>
+</html>
+adiciona index.html
