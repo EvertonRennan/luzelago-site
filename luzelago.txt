@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Luz & Lago Engenharia - Energia Solar Compartilhada</title>
+<style>
+  /* Estilos gerais do corpo */
+  body {
+    font-family: 'Inter', sans-serif; /* Usando Inter como fonte principal */
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8; /* Branco suave para o fundo */
+    color: #333; /* Cor de texto padrão */
+    line-height: 1.6; /* Espaçamento de linha para melhor leitura */
+  }
+
+  /* Estilos do cabeçalho */
+  header {
+    background-color: #001f3f; /* Azul marinho escuro */
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    display: flex; /* Para alinhar a logo verticalmente */
+    flex-direction: column; /* Organiza itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    border-bottom-left-radius: 10px; /* Cantos arredondados na parte inferior */
+    border-bottom-right-radius: 10px;
+  }
+
+  header img {
+    max-width: 180px; /* Tamanho da logo */
+    height: auto;
+    margin-bottom: 0.5rem; /* Espaçamento abaixo da logo */
+    border-radius: 5px; /* Levemente arredondada */
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700; /* Negrito para o título */
+  }
+
+  header p {
+    margin: 0.3rem 0 0;
+    font-weight: 500; /* Peso da fonte para a tagline */
+    font-size: 1.1rem;
+  }
+
+  /* Estilos do conteúdo principal */
+  main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem; /* Aumentado o padding para os lados */
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+    background: #ffffff; /* Fundo branco para as seções */
+    padding: 1.5rem; /* Padding interno das seções */
+    border-radius: 10px; /* Cantos arredondados para as seções */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave para destaque */
+  }
+
+  h2 {
+    color: #001f3f; /* Azul marinho para títulos de seção */
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #e6f2ff; /* Linha sutil abaixo dos títulos */
+    padding-bottom: 0.5rem;
+  }
+
+  /* Estilos das listas (Por que escolher) */
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #e6f2ff; /* Azul claro para os itens da lista */
+    margin-bottom: 0.8rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px; /* Cantos mais arredondados */
+    color: #001f3f; /* Texto azul marinho nos itens da lista */
+    font-weight: 500;
+  }
+
+  /* Estilos dos botões */
+  .buttons {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: #001f3f; /* Azul marinho para os botões */
+    color: white;
+    padding: 1rem 2rem; /* Aumentado o padding para botões maiores */
+    margin: 0.5rem 0.8rem;
+    text-decoration: none;
+    border-radius: 8px; /* Cantos arredondados */
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave e efeito de escala */
+    box-shadow: 0 4px 6px rgba(0, 31, 63, 0.2); /* Sombra para os botões */
+  }
+
+  .btn:hover {
+    background-color: #003366; /* Azul marinho um pouco mais claro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação */
+  }
+
+  /* Estilos dos depoimentos */
+  blockquote {
+    background: #f0f7ff; /* Azul muito claro para depoimentos */
+    border-left: 5px solid #001f3f; /* Borda azul marinho */
+    margin: 1.5rem 0;
+    padding: 1.2rem 1.8rem;
+    font-style: italic;
+    color: #444;
+    border-radius: 8px; /* Cantos arredondados */
+  }
+
+  /* Estilos do rodapé */
+  footer {
+    background: #001f3f; /* Azul marinho escuro */
+    color: #e6f2ff; /* Azul claro para o texto do rodapé */
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+    margin-top: 3rem; /* Espaço acima do rodapé */
+    border-top-left-radius: 10px; /* Cantos arredondados na parte superior */
+    border-top-right-radius: 10px;
+  }
+
+  footer a {
+    color: #e6f2ff; /* Azul claro para links no rodapé */
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* Media Queries para responsividade */
+  @media (max-width: 768px) {
+    header img {
+      max-width: 150px; /* Ajusta o tamanho da logo para telas menores */
+    }
+    h2 {
+      font-size: 1.4rem;
+    }
+    .btn {
+      padding: 0.9rem 1.6rem;
+      font-size: 0.95rem;
+    }
+    main {
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.6rem;
+    }
+    header p {
+      font-size: 1rem;
+    }
+    .btn {
+      display: block; /* Botões empilhados em telas muito pequenas */
+      width: calc(100% - 2rem); /* Ocupa quase toda a largura */
+      margin: 0.5rem auto; /* Centraliza */
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <!-- Logo da Luz & Lago Engenharia -->
+  <img src="aaaaa.jpg" alt="Logo Luz & Lago Engenharia" onerror="this.onerror=null;this.src='https://placehold.co/180x60/001f3f/FFFFFF?text=Luz+%26+Lago';" />
+  <h1>Luz & Lago Engenharia</h1>
+  <p>Energia Solar Compartilhada Sem Instalação</p>
+</header>
+<main>
+  <section>
+    <h2>Por que escolher Luz & Lago?</h2>
+    <ul>
+      <li>Sem instalação ou obras – energia limpa e sustentável direto para sua conta.</li>
+      <li>Economia real na sua conta de luz todos os meses.</li>
+      <li>Contratação 100% online – simples, rápida e segura.</li>
+      <li>Atendimento personalizado e suporte dedicado.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Como funciona?</h2>
+    <p>
+      Assine nossa energia solar compartilhada e receba créditos que reduzem sua fatura sem precisar instalar painéis no seu imóvel. Tudo gerenciado por uma plataforma digital fácil de usar.
+    </p>
+  </section>
+  <section>
+    <h2>Depoimentos</h2>
+    <blockquote>
+      "Economizei 25% na minha conta e não precisei me preocupar com instalação!" – Ana S., Recife
+    </blockquote>
+    <blockquote>
+      "Solução prática e sustentável para quem mora em apartamento." – Carlos M., Olinda
+    </blockquote>
+  </section>
+  <section class="buttons">
+    <a href="https://www.luzelagoengenharia.com.br/assinatura" target="_blank" class="btn">FAÇA SUA ASSINATURA</a>
+    <a href="https://www.luzelagoengenharia.com.br/contato" target="_blank" class="btn">TIRE SUAS DÚVIDAS</a>
+  </section>
+</main>
+<footer>
+  <p>Contato: (81) 99999-9999 | <a href="mailto:contato@luzelagoengenharia.com.br">contato@luzelagoengenharia.com.br</a></p>
+  <p>Siga-nos no Instagram | Facebook | WhatsApp</p>
+</footer>
+</body>
+</html>
